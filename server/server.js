@@ -15,7 +15,7 @@ app.use(express.json()); // Enables json parsing for incoming requests
 // POST requests that send JSON won't work without
 
 const __dirname = path.resolve(); // Absolute path to current working directory
-const clientBuildPath = path.join(__dirname, '../client/dist'); 
+const clientBuildPath = path.join(__dirname, 'client/dist'); 
 // Assuming file structure is client and server as 2 separate subfolders, and server.js in server
 // And dist (the built React app after running "npm run build" inside the client folder) at client/dist
 

@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "build": "cd client && npm install && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venkatsubra01/portfolio.git"
+  },
+  "author": "Venkat Subramanian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/venkatsubra01/portfolio/issues"
+  },
+  "homepage": "https://github.com/venkatsubra01/portfolio#readme"
+}
