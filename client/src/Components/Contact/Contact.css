@@ -184,6 +184,7 @@ form{
 
     button {
         width: 100%;
+        color: #333; /* Set the font color to dark for mobile as well */
     }
 
     form {
