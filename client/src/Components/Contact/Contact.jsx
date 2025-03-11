@@ -20,7 +20,7 @@ const Contact = () => {
 
         try {
             // Route to contact API route
-            const response = await fetch('http://localhost:4732/api/contact', {
+            const response = await fetch(`${window.location.protocol}//${window.location.hostname}:${window.location.port}/api/contact`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -8,6 +8,10 @@
     "build": "cd client && npm install && npm run build",
     "heroku-postbuild": "npm run build"
   },
+  "engines": {
+    "node": "23.9.0",
+    "npm": "10.9.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/venkatsubra01/portfolio.git"

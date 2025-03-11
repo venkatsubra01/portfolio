@@ -7,7 +7,7 @@ import emailjs from '@emailjs/nodejs';
 dotenv.config(); // reads .env file, parses contents, and loads into process
 
 const app = express(); //initializes express application
-const PORT = process.env.PORT || 4732; // Sets port to 4732 if not set as env variable
+const PORT = process.env.PORT || 8000; // Sets port to 8000 if not set as env variable
 // Will be set to env variable when deploying
 
 app.use(cors()); // Allows requests from different origins
