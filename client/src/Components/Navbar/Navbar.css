@@ -7,8 +7,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 170px;
+    margin: 25px 170px;
+    height: 120px;
     font-family: satoshi;
+    
 
     .icon{
         width: 200px;
