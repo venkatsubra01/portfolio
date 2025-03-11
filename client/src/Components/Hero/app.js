@@ -8,13 +8,13 @@ const runBackgroundScript = () => {
     let ctx = canvas.getContext('2d');
 
     let dots = [];
-    let arrayColors = ['#746eaa', '#2dfdf4', '#bcffb2']
+    let arrayColors = ['#746eaa', '#2dfdf4', '#bcffb2', '#00e498']
     for (let index = 0; index < NUM_DOTS; index++) {
         dots.push ({
-            x: Math.floor(Math.random() * (canvas.width)),
-            y: Math.floor(Math.random() * canvas.height),
+            x: 5 + Math.floor(Math.random() * (canvas.width-15)),
+            y: 5 + Math.floor(Math.random() * canvas.height-15),
             size: Math.random() * 3 * 5,
-            color: arrayColors[Math.floor(Math.random()*3)] /*3 colors*/
+            color: arrayColors[Math.floor(Math.random()*4)] /*4 colors*/
         });
     }
 

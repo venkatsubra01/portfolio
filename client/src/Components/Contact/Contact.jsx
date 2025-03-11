@@ -6,6 +6,7 @@ import linkedin_icon from '../../assets/linkedin_icon.png'
 import github_icon from '../../assets/github_icon.png'
 import pattern_image from '../../assets/pattern_image.png'
 import emailjs from '@emailjs/browser';
+import { motion } from "framer-motion"
 
 const Contact = () => {
     const form = useRef();
@@ -43,13 +44,13 @@ const Contact = () => {
     
   return (
     <div id='contact' className="contact-body">
-        <div className="contact-title">
+        <motion.div className="contact-title" initial = {{x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: 0.7, ease: "easeOut" }}>
             <h1> Contact Me</h1>
             <img src={pattern_image} alt=""></img>
-        </div>
+        </motion.div>
         
 
-        <div className="contact-container">
+        <motion.div className="contact-container" initial = {{x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: 0.7, ease: "easeOut" }}>
             <div className="contact-info">
                 <h4>
                     Contact Information
@@ -57,11 +58,11 @@ const Contact = () => {
                 <p>Fill out the form, and I will get back to you.</p>
                 <div className="icon-text">
                     <img src={phone_icon} alt="" width="20px" height="20px"/>
-                    <span>908-392-0983</span>
+                    <span>Fill out the form for my phone number</span>
                 </div>
                 <div className="icon-text">
                     <img className="icon-image" src={mail_icon} alt="" width="20px" height="20px"/>
-                    <span>venkat.subra@princeton.edu</span>
+                    <span>venkat.subra[at]princeton.edu</span>
                 </div>
                 <div className="social-media">
                     <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/venkat-subramanian5" className="icon-circle">
@@ -106,7 +107,7 @@ const Contact = () => {
                     </div>
                 </div>
             </form>
-        </div>
+        </motion.div>
     </div>
   )
 }

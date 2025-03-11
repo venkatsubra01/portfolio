@@ -1,9 +1,21 @@
 .hero{
     display: flex;
-    align-items: center;
-    flex-direction: column;
     gap: 30px;
     position: relative;
+    margin: 80px 170px;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.right-section {
+    margin: auto;
 }
 
 .hero img{
@@ -51,10 +63,9 @@
     transform: scale(1.05);
   }
 
-.hero-resume {
+.hero-contact {
     padding: 15px 30px;
     border-radius: 50px;
-    background: 2px solid #FFF;
     border-style: solid;
     border-color: white;
     font-size: 24px;
@@ -63,7 +74,7 @@
     color: white;
 }
 
-.hero-resume:hover {
+.hero-contact:hover {
     border: 2px solid #2dfdf4;
     transform: scale(1.05);
     
@@ -82,11 +93,15 @@
 
 }
 
-@media(max-width: 768px){
+@media(max-width: 1060px){
+    .hero {
+        flex-direction: column-reverse;
+        margin: 40px 170px;
+    }
     .hero img{
         margin-top: 10px;
-        height: 200px;
-        width: 200px;
+        height: 300px;
+        width: 300px;
     }
 
     .hero h1{

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { debounce } from "lodash";
 import './Navbar.css'
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo.png'
 import pattern_image from '../../assets/pattern_image.png'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import menu_icon from '../../assets/menu_icon.png'
@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <div className='navbar'>
-        <img src={logo} alt="" width="50px" height="50px"/>
+        <img src={logo} alt="" width="50px" height="50px" className="icon"/>
         <img src={menu_icon} onClick={openMenu} alt="" className='nav-mob-open'/>
         <ul ref={menuRef}className="nav-menu">
             <img src={menu_close} onClick={closeMenu} alt="" className="nav-mob-close"/>

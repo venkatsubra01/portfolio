@@ -20,6 +20,7 @@
     "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
     "express": "^4.21.2",
+    "framer-motion": "^12.4.11",
     "lodash": "^4.17.21",
     "nodemailer": "^6.10.0",
     "react": "^19.0.0",

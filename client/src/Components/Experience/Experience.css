@@ -90,6 +90,7 @@
 
 .experience-tags{
     overflow-wrap: break-word; /*Makes long words break if they exceed the width*/
+    margin: 0 80px;
 }
 
 .experience-body li{
@@ -97,19 +98,18 @@
     list-style-position: inside;
 }
 
-.experience-tags ul{
-    list-style-type: none;
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
+.experience-tags ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    list-style: none;
 }
 
-.experience-tags li{
-    background-color: black;
-    color: gray;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    padding: 5px;
+.experience-tags li {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .show-buttons {
@@ -172,6 +172,10 @@
     .company-image {
         width: 120px; /* Increase logo size */
         height: auto;
+    }
+
+    .experience-tags {
+        margin: 0 120px;
     }
 
     .experience-tags li {

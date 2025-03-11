@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import pattern_image from '../../assets/pattern_image.png'
 import myexperience_data from '../../assets/myexperience_data.js'
 import arrow_icon from '../../assets/arrow_icon.png'
+import { motion } from "framer-motion"
+
 import './Experience.css'
 
 const Experience = () => {
@@ -13,12 +15,12 @@ const Experience = () => {
   const [numAvailable, setNumAvailable] = useState(0);
   return (
     <div id='experience' className='experience-section'>
-        <div className="experience-title">
+        <motion.div className="experience-title" initial = {{x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: 0.7, ease: "easeOut" }}>
             <h1>My Experience</h1>
             <img src={pattern_image} alt=""></img>
-        </div>
+        </motion.div>
         <div>
-            <div className="experience-categories">
+            <motion.div className="experience-categories"  initial = {{x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: 0.7, ease: "easeOut" }}>
                 <div className="column" onClick={()=>handleExperienceCategory("all")}>
                     <h6>All</h6>
                 </div>
@@ -31,7 +33,7 @@ const Experience = () => {
                 <div className="column" onClick={()=>handleExperienceCategory("other")}>
                     <h6>Other</h6>
                 </div>
-            </div>
+            </motion.div>
         </div>
         <div className="experiences">
             {myexperience_data
@@ -40,7 +42,7 @@ const Experience = () => {
                     experience.category.includes(experience_category)
                 ).splice(0, numShowing)
                 .map((experience, index) => (
-                    <div key={index} className="experience-group">
+                    <motion.div key={index} className="experience-group" initial = {{x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: 0.7, ease: "easeOut" }}>
                         <div className="experience-head">
                             <div className="column">
                                 <img className='company-image' src={experience.img}></img>
@@ -67,11 +69,11 @@ const Experience = () => {
                         </div>
                     
 
-                </div>  
+                    </motion.div>  
                 ))}
             
         </div>
-        <div className="show-buttons">
+        <motion.div className="show-buttons" initial = {{x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: 0.7, ease: "easeOut" }}>
             <div onClick={()=>setNumShowing(Math.min(numShowing+4, 12))} className="myexperience-show">
                 <p>Show More</p>
                 <img src={arrow_icon} alt="" width="35px" height="35px"/>
@@ -80,7 +82,7 @@ const Experience = () => {
                 <p>Show Less</p>
                 <img src={arrow_icon} alt="" width="35px" height="35px"/>
             </div> )}
-        </div>
+        </motion.div>
         
     </div>
   )

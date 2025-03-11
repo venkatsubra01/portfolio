@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import pattern_image from '../../assets/pattern_image.png'
 import mywork_data from '../../assets/mywork_data.js'
 import arrow_icon from '../../assets/arrow_icon.png'
+import { motion } from "framer-motion"
 import './MyWork.css'
+
 
 const MyWork = () => {
 
@@ -10,13 +12,13 @@ const MyWork = () => {
   const [numShowing, setNumShowing] = useState(4);
   return (
     <div id='mywork' className='mywork'>
-        <div className="mywork-title">
+        <motion.div className="mywork-title" initial = {{x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: 0.7, ease: "easeOut" }}>
             <h1>My Latest Work</h1>
             <img src={pattern_image} alt=""></img>
-        </div>
+        </motion.div>
         <div className="mywork-container">
             {mywork_data.slice(0, numShowing).map((work,index)=>(
-                <div key={index} className="mywork-item">
+                <motion.div key={index} className="mywork-item" initial = {{x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: 0.7, ease: "easeOut" }}>
                     <div className="container-top">
                         <img src={hoveredIndex === index ? work.w_gif : work.w_img} alt="" onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)}/>
                         
@@ -45,11 +47,11 @@ const MyWork = () => {
                             </div>
                         )}
                     </div>
-                </div>
+                </motion.div>
             ))}
             
         </div>
-        <div className="show-buttons">
+        <motion.div className="show-buttons" initial = {{x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: 0.7, ease: "easeOut" }}>
             <div onClick={()=>setNumShowing(numShowing+4)} className="mywork-show">
                 <p>Show More</p>
                 <img src={arrow_icon} alt="" width="35px" height="35px"/>
@@ -58,7 +60,7 @@ const MyWork = () => {
                 <p>Show Less</p>
                 <img src={arrow_icon} alt="" width="35px" height="35px"/>
             </div> )}
-        </div>
+        </motion.div>
         
         
     </div>
