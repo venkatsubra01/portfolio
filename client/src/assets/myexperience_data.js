@@ -60,7 +60,7 @@ const myexperience_data = [
         img: pvl_logo,
         points: ["Collaborating with Ph.D. students in developing computer vision models to detect transparent and reflective objects",
             "3rd author on research paper submitted to the International Conference on Computer Vision (ICCV) 2025"],
-        tags: [],
+        tags: [["LaTeX", "#1e873d"]],
         category:["research"]
     },
     {
@@ -70,7 +70,7 @@ const myexperience_data = [
         img: pillow_logo,
         points: ["Researching computational neural models for mouse behavior and decision making over time using PsyTrack",
             "Youngest researcher in lab group history"],
-        tags: [],
+        tags: [["Python", "#f5f0a6"]],
         category: ["research"]
     },
     {

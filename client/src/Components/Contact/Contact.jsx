@@ -11,6 +11,7 @@ import { motion } from "framer-motion"
 const Contact = () => {
     const form = useRef();
     const [status, setStatus] = useState('');
+    const [resultStatus, setResultStatus] = useState('none');
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -32,13 +33,16 @@ const Contact = () => {
             const result = await response.json();
             if (response.ok) {
                 setStatus('Message sent successfully!');
+                setResultStatus('success');
                 form.current.reset();
             } else {
-                setStatus('Failed to send message.');
+                setStatus('Failed to send message. Please email me directly.');
+                setResultStatus('fail');
             }
         } catch (error) {
             console.error('Error:', error);
-            setStatus('An error occurred. Please try again.');
+            setStatus('An error occurred. Please email me directly.');
+            setResultStatus('fail');
         }
     };
     
@@ -105,6 +109,9 @@ const Contact = () => {
                         <button className="primary" type="submit">Send Message</button>
 
                     </div>
+                </div>
+                <div className={resultStatus}>
+                    <p>{status}</p>
                 </div>
             </form>
         </motion.div>

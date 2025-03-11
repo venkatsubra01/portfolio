@@ -75,6 +75,9 @@
     display: grid;
     grid-template-columns: 40% 60%;
     grid-column-gap: 15px;
+    .column {
+        margin-right: 10%;
+    }
 
     .column h4 {
         text-align: left;

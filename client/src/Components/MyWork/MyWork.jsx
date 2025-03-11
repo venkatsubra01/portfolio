@@ -10,6 +10,7 @@ const MyWork = () => {
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [numShowing, setNumShowing] = useState(4);
+  const numAvailable = mywork_data.length;
   return (
     <div id='mywork' className='mywork'>
         <motion.div className="mywork-title" initial = {{x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: 0.7, ease: "easeOut" }}>
@@ -52,11 +53,11 @@ const MyWork = () => {
             
         </div>
         <motion.div className="show-buttons" initial = {{x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: 0.7, ease: "easeOut" }}>
-            <div onClick={()=>setNumShowing(numShowing+4)} className="mywork-show">
+            {numShowing < numAvailable && (<div onClick={()=>setNumShowing(Math.min(numShowing+4, numAvailable))} className="mywork-show">
                 <p>Show More</p>
                 <img src={arrow_icon} alt="" width="35px" height="35px"/>
-            </div>
-            {numShowing >= 8 && ( <div onClick={()=>setNumShowing(numShowing-4)} className="mywork-show">
+            </div> )}
+            {numShowing >= 8 && ( <div onClick={()=>setNumShowing(Math.max(numShowing-4, 0))} className="mywork-show">
                 <p>Show Less</p>
                 <img src={arrow_icon} alt="" width="35px" height="35px"/>
             </div> )}

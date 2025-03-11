@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import pattern_image from '../../assets/pattern_image.png'
 import myexperience_data from '../../assets/myexperience_data.js'
 import arrow_icon from '../../assets/arrow_icon.png'
@@ -9,10 +9,26 @@ import './Experience.css'
 const Experience = () => {
   const [experience_category, setExperienceCategory] = useState("all");
   const handleExperienceCategory = (value) => {
+    console.log(value);
     setExperienceCategory(value);
   }
+
+  /* Whenever experience_category changes, numAvailable will change immediately */
+  useEffect(() => {
+    setNumAvailable(myexperience_data
+      .filter(experience => 
+        experience_category === "all" || 
+        experience.category.includes(experience_category)
+      ).length
+    );
+  }, [experience_category]);
+
   const [numShowing, setNumShowing] = useState(4);
-  const [numAvailable, setNumAvailable] = useState(0);
+  const [numAvailable, setNumAvailable] = useState(myexperience_data
+    .filter(experience => 
+        experience_category === "all" || 
+        experience.category.includes(experience_category)
+    ).length);
   return (
     <div id='experience' className='experience-section'>
         <motion.div className="experience-title" initial = {{x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: 0.7, ease: "easeOut" }}>
@@ -74,11 +90,11 @@ const Experience = () => {
             
         </div>
         <motion.div className="show-buttons" initial = {{x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: 0.7, ease: "easeOut" }}>
-            <div onClick={()=>setNumShowing(Math.min(numShowing+4, 12))} className="myexperience-show">
+            {numShowing < numAvailable && (<div onClick={()=>setNumShowing(Math.min(numShowing+4, numAvailable))} className="myexperience-show">
                 <p>Show More</p>
                 <img src={arrow_icon} alt="" width="35px" height="35px"/>
-            </div>
-            {numShowing >= 8 && ( <div onClick={()=>setNumShowing(numShowing-4)} className="myexperience-show">
+            </div>)}
+            {numShowing >= 8 && ( <div onClick={()=>setNumShowing(Math.max(numShowing-4, 0))} className="myexperience-show">
                 <p>Show Less</p>
                 <img src={arrow_icon} alt="" width="35px" height="35px"/>
             </div> )}
