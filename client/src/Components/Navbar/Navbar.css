@@ -10,6 +10,7 @@
     margin: 25px 170px;
     height: 120px;
     font-family: satoshi;
+    gap: 15px;
     
 
     .icon{
@@ -70,8 +71,7 @@ a:active {
     display:none;
 }
 
-
-@media(max-width: 768px) {
+@media(max-width: 1100px) {
     .navbar{
         margin: 20px 50px;
     }
