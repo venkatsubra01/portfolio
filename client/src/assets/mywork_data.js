@@ -33,7 +33,7 @@ const mywork_data = [
         w_img: greencycle_img1,
         w_gif: greencycle_gif,
         project_descr: "A website that allows users to input their location information and recyclables, and get back their closest recycling plant and estimated financial compensation for turning in the recyclables",
-        tags: [["LangChain", "#f5eb95"], ["Tavily API","#90b08b"], ["OpenAI API", "#b7b8ed"], ["Flask", "#84adf0"], ["CSS","#b5e6ba"]],
+        tags: [["LangChain", "#f5eb95"], ["Tavily API","#90b08b"], ["OpenAI API", "#b7b8ed"], ["Flask", "#84adf0"], ["CSS","#b5e6ba"], ["Figma", "#c98f95"]],
         further_details: "https://github.com/venkatsubra01/GreenCycle/tree/greencycle"
     },
     {
