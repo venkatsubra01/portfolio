@@ -29,7 +29,7 @@ const MyWork = () => {
                             <p>{work.w_name}</p>
                         </div>
                         <div className="project-description">
-                            <p>{work.project_descr}</p>
+                        <p dangerouslySetInnerHTML={{ __html: work.project_descr }}></p> {/* When the project description contains a link, that should be rendered */}
                         </div>
                         <div className="project-tags">
                             <ul>

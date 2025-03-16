@@ -24,7 +24,7 @@ const mywork_data = [
         w_name: "Random Dots Motion Task",
         w_img: randomdots_img1,
         w_gif: randomdots_gif,
-        project_descr: "Implementing the Random Dots Saccade Task (from Roitman and Shadlen et al.) for live data collection in neuroscience",
+        project_descr: "Implementing the Random Dots Saccade Task (from <a href='https://pubmed.ncbi.nlm.nih.gov/12417672/' target='_blank' rel='noopener noreferrer' style='TEXT-DECORATION: underline'>Roitman and Shadlen et al.</a>) for live data collection in neuroscience",
         tags: [["Flask", "#84adf0"], ["JavaScript", "#e9b6fa"],["CSS","#b5e6ba"], ["Matplotlib", "#f2a99d"]],
         further_details: "https://github.com/venkatsubra01/VisualDotsMotionTask"
     },
