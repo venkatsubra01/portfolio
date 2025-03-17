@@ -58,8 +58,7 @@ const myexperience_data = [
         title: "Undergraduate Researcher",
         dates: "January '25 - Present",
         img: pvl_logo,
-        points: ["Collaborating with Ph.D. students in developing computer vision models to detect transparent and reflective objects",
-            "3rd author on research paper submitted to the International Conference on Computer Vision (ICCV) 2025"],
+        points: ["Collaborating with Ph.D. students in developing computer vision models to detect transparent and reflective objects"],
         tags: [["LaTeX", "#1e873d"]],
         category:["research"]
     },
