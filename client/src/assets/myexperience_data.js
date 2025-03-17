@@ -58,7 +58,9 @@ const myexperience_data = [
         title: "Undergraduate Researcher",
         dates: "January '25 - Present",
         img: pvl_logo,
-        points: ["Collaborating with Ph.D. students in developing computer vision models to detect transparent and reflective objects"],
+        points: ["Collaborating with Ph.D. students in developing computer vision models to detect transparent and reflective objects", 
+            "Paper available <a href='https://arxiv.org/abs/2503.11633' target='_blank' rel='noopener noreferrer' style='TEXT-DECORATION: underline'>here</a>"
+        ],
         tags: [["LaTeX", "#1e873d"]],
         category:["research"]
     },

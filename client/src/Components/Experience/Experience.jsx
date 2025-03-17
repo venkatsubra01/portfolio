@@ -72,7 +72,9 @@ const Experience = () => {
                         <div className="experience-body">
                             <ul>
                                 {experience.points.map((point, j) => (
-                                    <li key={j}>{point}</li>
+                                    <div key={j}>
+                                        <li dangerouslySetInnerHTML={{ __html: point }}></li>
+                                    </div>
                                 ))}
                             </ul>
                         </div>
