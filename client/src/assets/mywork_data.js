@@ -9,10 +9,27 @@ import lsm_gif from './work_gifs/lsm_gif.gif'
 import aki_img from './work_images/AKI_1.png'
 import portfolio_img from './work_images/portfolio.png'
 import portfolio_gif from './work_gifs/portfolio_gif.gif'
-
+import tigermarket_img from './work_images/TigerMarket.png'
+import tigermarket_gif from './work_gifs/TigerMarket_gif.gif'
+import gcrl_img from './work_images/GCRL.png'
+import gcrl_gif from './work_gifs/GCRL_gif.gif'
 
 const mywork_data = [
     {
+        w_name: "TigerMarket",
+        w_img: tigermarket_img,
+        w_gif: tigermarket_gif,
+        project_descr: "A marketplace app enabling Princeton students to buy and sell items within the campus community.",
+        tags: [["React.js", "#ed7e72"], ["Express.js", "#72edb4"],["HeroUI","#58bbed"], ["Tailwind CSS", "#f04198"]],
+        further_details: "https://tigermarket-f7555a069d76.herokuapp.com/"
+    },{
+        w_name: "Benchmarking Goal-Conditioned Reinforcement Learning with Soccer",
+        w_img: gcrl_img,
+        w_gif: gcrl_gif,
+        project_descr: "Introducing two new soccer reinforcement learning (RL) environments and implementing state-of-the-art RL algorithms on these new environments.",
+        tags: [["Python", "#61d480"], ["XML", "#eddb93"],["WanDB","#c693ed"]],
+        further_details: "https://github.com/venkatsubra01/COS435-Reinforcement-Learning-Final-Project/tree/main"
+    },{
         w_name: "This Portfolio Website!",
         w_img: portfolio_img,
         w_gif: portfolio_gif,

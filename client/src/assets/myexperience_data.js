@@ -7,27 +7,36 @@ import pillow_logo from './experience_images/pillow_lab_logo.png'
 import princeton_cs_logo from './experience_images/princeton_cs_logo.jpg'
 import bu_disc_logo from './experience_images/bu_disc_logo.jpeg'
 import kiryluk_lab_logo from './experience_images/kiryluk_lab_logo.jpeg'
-
+import prudential_logo from './experience_images/prudential_logo.png'
 
 const myexperience_data = [
     {
+        name: "Prudential Financial",
+        title: "Software Engineering Intern",
+        dates: "May '25 - August '25",
+        img: prudential_logo,
+        points: ["Constructing Retrieval-Augmented Generation scripts to automate legal and compliance pipelines in LangChain.",
+            "Clustering and predicting outages on Prudential’s IT network using graph databases on AWS Neptune."],
+        tags: [["LangChain", "#f5eb95"],["Hugging Face", "#cbf090"], ["AWS Neptune", "#9099f0"], ["SQL", "#e2faaf"], ["Streamlit", "#f09095"]],
+        category: ["software-development", "data-analysis"] /*Formatted like this so that it can be used as a className */
+    },{
         name: "TrueToForm",
         title: "Software Engineering Intern",
         dates: "December '24 - February '25",
         img: truetoform_logo,
-        points: ["Enhanced accuracy of TrueToForm’s computer vision edge detection algorithm for human body movement in boundary cases and cluttered environments by 81% by implementing a moving median filter in TypeScript.",
-            "Developed Flask web app with Firebase database integration and deployed using Docker and Google Cloud Run to provide a no-code web interface for users to upload garment measurement data"],
+        points: ["Enhanced human body movement detection accuracy by 81% in cluttered environments using computer vision algorithms.",
+            "Developed and deployed a web interface for TrueToForm’s internal team to upload garment measurement data."],
         tags: [["TypeScript", "#98afed"],["FireBase", "#f7bcdc"], ["Shopify API", "#e6b1a5"], ["Google CloudRun", "#bcf7e4"], ["Flask", "#84adf0"], ["CSS","#b5e6ba"]],
-        category: ["software-development"] /*Formatted like this so that it can be used as a className */
+        category: ["software-development"]
     },
     {
         name: "BillCare.ai ",
         title: "Software Engineering Intern",
         dates: "May '24 - September '24",
         img: billcare_logo,
-        points: ["Implemented TensorFlow Neural Network and linear regression model based on open-source and in-house datasets that can accurately predict medical procedure prices 64% more accurately than leading competitors",
-            "Developed a Python script to automate scraping of medical bill PDFs and scaled in-house medical bill database from zero to 1,500+ rows",
-            "Hosted medical bill and reference medical pricing databases using an AWS RDS MySQL database by chunk-importing rows into the cloud from a local DuckDB instance"],
+        points: ["Outperformed competitors by 64% in predicting medical procedure prices using a TensorFlow Neural Network model.",
+            "Saved ∼100 team-hours by extracting data from medical bill PDFs using OCR scripts.",
+            "Deployed a 300GB medical billing and pricing database on AWS Relational Database Service (RDS)."],
         tags: [["AWS Relational Database Service", "#d0b2ed"], ["DuckDB", "#b2edd0"], ["TensorFlow", "#edd1b2"], ["Python", "#f5f0a6"]],
         category: ["software-development", "data-analysis"]
     },
