@@ -13,9 +13,18 @@ import tigermarket_img from './work_images/TigerMarket.png'
 import tigermarket_gif from './work_gifs/TigerMarket_gif.gif'
 import gcrl_img from './work_images/GCRL.png'
 import gcrl_gif from './work_gifs/GCRL_gif.gif'
+import translator_img from './work_images/Translation.png'
+import translator_gif from './work_gifs/Translation_gif.gif'
 
 const mywork_data = [
     {
+        w_name: "Neural Machine Translator",
+        w_img: translator_img,
+        w_gif: translator_gif,
+        project_descr: "An Seq2Seq machine learning model built, pretrained, fine-tuned and tested to translate Mandarin sentences to English",
+        tags: [["React.js", "#ed7e72"], ["Flask", "#84adf0"],["Tailwind CSS", "#f04198"], ["PyTorch", "#e64e24"]],
+        further_details: "https://tigermarket-f7555a069d76.herokuapp.com/"
+    },{
         w_name: "TigerMarket",
         w_img: tigermarket_img,
         w_gif: tigermarket_gif,
