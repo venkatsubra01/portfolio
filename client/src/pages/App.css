@@ -1,6 +1,6 @@
 @font-face {
     font-family: "satoshi";
-    src: url("..//assets/fonts/Satoshi-Regular.woff") format('woff');
+    src: url("../assets/fonts/Satoshi-Regular.woff") format('woff');
   }
 
 .full-app{

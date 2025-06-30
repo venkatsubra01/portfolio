@@ -23,7 +23,7 @@ const mywork_data = [
         w_gif: translator_gif,
         project_descr: "An Seq2Seq machine learning model built, pretrained, fine-tuned and tested to translate Mandarin sentences to English",
         tags: [["React.js", "#ed7e72"], ["Flask", "#84adf0"],["Tailwind CSS", "#f04198"], ["PyTorch", "#e64e24"]],
-        further_details: "https://tigermarket-f7555a069d76.herokuapp.com/"
+        further_details: "https://github.com/venkatsubra01/CS224N-Natural-Language-Processing/tree/main/a4"
     },{
         w_name: "TigerMarket",
         w_img: tigermarket_img,

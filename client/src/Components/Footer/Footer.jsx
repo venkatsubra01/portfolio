@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="footer-body">
         <div className="bottom-section">
             <h4>Copyright © 2025 Venkat Subramanian. All rights reserved.</h4> 
-            <h4>Last updated March 2025.</h4>
+            <h4>Last updated June 2025.</h4>
         </div>
     </div>
   )

@@ -69,7 +69,7 @@
 
 .mywork-container img {
     width: 100%;
-    height: 250px;
+    height: 100%;
     transition: 0.3s;
     cursor: pointer;
     object-fit: cover;
